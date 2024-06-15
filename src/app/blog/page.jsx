@@ -1,22 +1,23 @@
 import { quantico, tradeWinds } from "@/utils/fonts";
+import { getBlogData } from "@/utils/getBlogData";
 import Link from "next/link";
 import { FaRegCalendarAlt, FaRegListAlt } from "react-icons/fa";
 
-async function getBlogData() {
-  try {
-    const res = await fetch(process.env.NEXTAUTH_URL + "/api/blogs", {
-      next: {
-        revalidate: 10,
-      },
-    });
-    if (!res.ok) {
-      throw new Error("Failed to fetch data");
-    }
-    return await res.json();
-  } catch (error) {
-    console.error("Error fetching blog data:", error);
-  }
-}
+// async function getBlogData() {
+//   try {
+//     const res = await fetch(process.env.NEXTAUTH_URL + "/api/blogs", {
+//       next: {
+//         revalidate: 10,
+//       }
+//     });
+//     if (!res.ok) {
+//       throw new Error("Failed to fetch data");
+//     }
+//     return await res.json();
+//   } catch (error) {
+//     console.error("Error fetching blog data:", error);
+//   }
+// }
 
 const formatDate = (dateString) => {
   const date = new Date(dateString);
@@ -45,7 +46,7 @@ const formatDate = (dateString) => {
 
 const BlogPage = async () => {
   const { blogs } = await getBlogData();
-  // const sortedBlogs = blogs.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+  const sortedBlogs = blogs.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
   return (
     <div className="mt-12">
@@ -55,8 +56,8 @@ const BlogPage = async () => {
         RECENT BLOG
       </h1>
       <div className="grid grid-cols-1 gap-4 mt-6 px-2 md:px-0">
-        {blogs.length > 0 &&
-          blogs.map((blog) => (
+        {sortedBlogs.length > 0 &&
+          sortedBlogs.map((blog) => (
             <div key={blog._id} className="border p-2 rounded-md">
               <div className="">
                 <Link
