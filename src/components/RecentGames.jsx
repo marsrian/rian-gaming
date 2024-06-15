@@ -2,8 +2,9 @@ import { quantico, tradeWinds } from "@/utils/fonts";
 import { getGamesInfo } from "@/utils/getGamesInfo";
 import Link from "next/link";
 
-const ResectGames = async () => {
+const RecentGames = async () => {
   const { games } = await getGamesInfo();
+  const sortedGames = games.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
   return (
     <div className="mt-12">
       <h1
@@ -12,8 +13,8 @@ const ResectGames = async () => {
         RECENT GAMES WALKTHROUGH
       </h1>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8 px-4 md:px-0">
-        {games.length > 0 &&
-          games.slice(0, 6).map((game) => (
+        {sortedGames.length > 0 &&
+          sortedGames.slice(0, 6).map((game) => (
             <div
               key={game._id}
               className="relative h-48 bg-cover bg-center"
@@ -39,4 +40,4 @@ const ResectGames = async () => {
   );
 };
 
-export default ResectGames;
+export default RecentGames;

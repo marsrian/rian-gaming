@@ -26,7 +26,8 @@ const GamesPage = async ({searchParams}) => {
   const start = (Number(page) - 1) * Number(per_page);
   const end = start + Number(per_page);
   const { games } = await getGameData();
-  const allGames = games.slice(start, end);
+  const sortedGames = games.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+  const allGames = sortedGames.slice(start, end);
   return (
     <div className="mt-12">
       <h1
