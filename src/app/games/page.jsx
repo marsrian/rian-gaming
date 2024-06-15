@@ -4,7 +4,9 @@ import Link from "next/link";
 
 async function getGameData() {
   try {
-    const res = await fetch(process.env.NEXTAUTH_URL + "/api/games");
+    const res = await fetch(process.env.NEXTAUTH_URL + "/api/games", {
+      cache: "no-store"
+    });
 
     if (!res.ok) {
       throw new Error("Failed to fetch game data");
