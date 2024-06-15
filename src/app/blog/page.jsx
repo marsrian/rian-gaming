@@ -45,7 +45,7 @@ const formatDate = (dateString) => {
 
 const BlogPage = async () => {
   const { blogs } = await getBlogData();
-  const sortedBlogs = blogs.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+  // const sortedBlogs = blogs.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
   return (
     <div className="mt-12">
@@ -55,8 +55,8 @@ const BlogPage = async () => {
         RECENT BLOG
       </h1>
       <div className="grid grid-cols-1 gap-4 mt-6 px-2 md:px-0">
-        {sortedBlogs.length > 0 &&
-          sortedBlogs.map((blog) => (
+        {blogs.length > 0 &&
+          blogs.map((blog) => (
             <div key={blog._id} className="border p-2 rounded-md">
               <div className="">
                 <Link
