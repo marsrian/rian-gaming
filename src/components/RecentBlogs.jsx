@@ -3,6 +3,31 @@ import { getRecentBlog } from "@/utils/getRecentBlog";
 import Link from "next/link";
 import { FaRegCalendarAlt, FaRegListAlt } from "react-icons/fa";
 
+const formatDate = (dateString) => {
+  const date = new Date(dateString);
+
+  const monthNames = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  const day = date.getDate();
+  const month = monthNames[date.getMonth()];
+  const year = date.getFullYear();
+
+  return `${day} ${month} ${year}`;
+};
+
 const RecentBlogs = async () => {
   const { blogs } = await getRecentBlog();
   const sortedBlogs = blogs.sort(
@@ -18,7 +43,7 @@ const RecentBlogs = async () => {
       </h1>
       <div className="grid grid-cols-1 gap-4 mt-6 px-2 md:px-0">
         {sortedBlogs.length > 0 &&
-          sortedBlogs.map((blog) => (
+          sortedBlogs.slice(0, 6).map((blog) => (
             <div key={blog._id} className="border p-2 rounded-md">
               <div className="">
                 <Link
@@ -32,7 +57,7 @@ const RecentBlogs = async () => {
                     <FaRegListAlt /> {blog.category}
                   </p>
                   <p className="flex items-center gap-1">
-                    <FaRegCalendarAlt /> {blog.createdAt}
+                    <FaRegCalendarAlt /> {formatDate(blog.createdAt)}
                   </p>
                 </div>
               </div>
