@@ -1,6 +1,6 @@
 import HeroSection from "@/components/HeroSection";
+import RecentBlogs from "@/components/RecentBlogs";
 import RecentGames from "@/components/RecentGames";
-import BlogPage from "./blog/page";
 
 const HomePage = () => {
   return (
@@ -9,7 +9,7 @@ const HomePage = () => {
       <div className="mt-20">
         <RecentGames />
         <div className="mt-20">
-          <BlogPage />
+          <RecentBlogs />
         </div>
       </div>
     </div>

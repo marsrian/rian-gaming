@@ -1,4 +1,4 @@
-export async function getBlogData() {
+export async function getRecentBlog() {
     try {
       const res = await fetch(process.env.NEXTAUTH_URL + "/api/blogs", {
         next: {
