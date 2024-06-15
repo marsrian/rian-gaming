@@ -18,30 +18,30 @@ async function getBlogData() {
   }
 }
 
-const formatDate = (dateString) => {
-  const date = new Date(dateString);
+// const formatDate = (dateString) => {
+//   const date = new Date(dateString);
 
-  const monthNames = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
+//   const monthNames = [
+//     "January",
+//     "February",
+//     "March",
+//     "April",
+//     "May",
+//     "June",
+//     "July",
+//     "August",
+//     "September",
+//     "October",
+//     "November",
+//     "December",
+//   ];
 
-  const day = date.getDate();
-  const month = monthNames[date.getMonth()];
-  const year = date.getFullYear();
+//   const day = date.getDate();
+//   const month = monthNames[date.getMonth()];
+//   const year = date.getFullYear();
 
-  return `${day} ${month} ${year}`;
-};
+//   return `${day} ${month} ${year}`;
+// };
 
 const BlogPage = async () => {
   const { blogs } = await getBlogData();
@@ -70,7 +70,7 @@ const BlogPage = async () => {
                     <FaRegListAlt /> {blog.category}
                   </p>
                   <p className="flex items-center gap-1">
-                    <FaRegCalendarAlt /> {formatDate(blog.createdAt)}
+                    <FaRegCalendarAlt /> {blog.createdAt}
                   </p>
                 </div>
               </div>
