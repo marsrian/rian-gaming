@@ -20,14 +20,14 @@ export default async function RootLayout({ children }) {
         bg-[url(/bg-1.jpg)] 
         bg-cover`}
       >
-        <AppProvider>
-          <Toaster />
-          <div className="sticky top-0 z-10">
-            <Header />
-          </div>
-          <main className="flex-grow">{children}</main>
-          <Footer />
-        </AppProvider>
+          <AppProvider>
+            <Toaster />
+            <div className="sticky top-0 z-10">
+              <Header />
+            </div>
+            <main className="flex-grow">{children}</main>
+            <Footer />
+          </AppProvider>
       </body>
     </html>
   );
