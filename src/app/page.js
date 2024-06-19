@@ -8,12 +8,12 @@ const HomePage = () => {
     <div className="mt-8 mb-6">
       <HeroSection />
       <div className="mt-20">
-        <Suspense fallback={<p>Loading Game Info...</p>}>
+        <Suspense fallback={<p>Loading...</p>}>
           <RecentGames />
         </Suspense>
       </div>
       <div className="mt-20">
-        <Suspense fallback={<p>Loading Blog Info...</p>}>
+        <Suspense fallback={<p>Loading...</p>}>
           <RecentBlogs />
         </Suspense>
       </div>
