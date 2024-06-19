@@ -12,5 +12,6 @@ export async function getGamesInfo() {
       return await res.json();
     } catch (error) {
       console.error("Error fetching Game data:", error);
+      return { games: [] };
     }
   }
