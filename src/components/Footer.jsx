@@ -27,8 +27,8 @@ const Footer = () => {
         <div>
           <h3 className="font-semibold text-lg mb-3">Resources</h3>
           <ul className="flex flex-col gap-2">
-            <Link href="/category">
-              <li>Category</li>
+            <Link href="/games">
+              <li>Games</li>
             </Link>
             <Link href="/blog" className="mb-5 md:mb-0">
               <li>Blogs</li>
