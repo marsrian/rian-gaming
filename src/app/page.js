@@ -1,6 +1,6 @@
 import HeroSection from "@/components/HeroSection";
+import RecentBlogs from "@/components/RecentBlogs";
 import RecentGames from "@/components/RecentGames";
-import { Suspense } from "react";
 
 
 const HomePage = () => {
@@ -9,6 +9,9 @@ const HomePage = () => {
       <HeroSection />
       <div className="mt-20">
         <RecentGames />
+      </div>
+      <div className="mt-20">
+        <RecentBlogs />
       </div>
     </div>
   );
