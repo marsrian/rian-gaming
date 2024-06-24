@@ -45,10 +45,6 @@ const ProfilePage = () => {
     });
   }
 
-  function handleFileChange(ev) {}
-
-  
-
   if (status === "unauthenticated") {
     return redirect("/login");
   }

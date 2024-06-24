@@ -71,7 +71,7 @@ const UserForm = ({ user, onSave }) => {
             id=""
             name=""
             placeholder="Image Link"
-            value={user?.image}
+            value={image}
             onChange={(ev) => setImage(ev.target.value)}
             className="border p-2 rounded-md"
           />
