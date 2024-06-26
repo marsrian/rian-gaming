@@ -2,6 +2,7 @@
 import DashBoardTabs from "@/components/DashboardTabs";
 import DeleteButton from "@/components/DeleteButton";
 import Trash from "@/components/Icons/Trash";
+import Loading from "@/components/Loading";
 import useProfile from "@/components/useProfile";
 import { quantico } from "@/utils/fonts";
 import { useEffect, useState } from "react";
@@ -76,7 +77,9 @@ const CategoryPage = () => {
   }
 
   if (profileLoading) {
-    return "Loading Category info...";
+    return (
+      <Loading loadingInfo={`Loading Category Info...`} />
+    );
   }
 
   if (!profileData.admin) {

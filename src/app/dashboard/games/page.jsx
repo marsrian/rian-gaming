@@ -1,6 +1,7 @@
 "use client";
 import DashBoardTabs from "@/components/DashboardTabs";
 import Right from "@/components/Icons/Right";
+import Loading from "@/components/Loading";
 import useProfile from "@/components/useProfile";
 import { quantico } from "@/utils/fonts";
 import Image from "next/image";
@@ -20,8 +21,11 @@ const GamesPage = () => {
   }, []);
 
   if (loading) {
-    return "Loading games info...";
+    return (
+      <Loading loadingInfo={`Loading Games Info...`} />
+    );
   }
+
   if (!data.admin) {
     return "Not an admin";
   }
@@ -30,7 +34,10 @@ const GamesPage = () => {
     <section className="mt-8 px-2 md:px-0">
       <DashBoardTabs isAdmin={true} />
       <div className={`${quantico.className} mt-8 max-w-2xl mx-auto`}>
-        <Link className="button border border-white rounded-md p-2 text-white" href={"/dashboard/games/new"}>
+        <Link
+          className="button border border-white rounded-md p-2 text-white"
+          href={"/dashboard/games/new"}
+        >
           Create new game walkthrough <Right />
         </Link>
       </div>

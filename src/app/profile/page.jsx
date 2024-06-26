@@ -1,4 +1,5 @@
 "use client";
+import Loading from "@/components/Loading";
 import UserForm from "@/components/UserForm";
 import { useSession } from "next-auth/react";
 import { redirect } from "next/navigation";
@@ -50,7 +51,9 @@ const ProfilePage = () => {
   }
 
   if (status === "loading" || !profileFetched) {
-    return "Loading...";
+    return (
+      <Loading loadingInfo={`Loading profile Info...`} />
+    );
   }
 
   return (

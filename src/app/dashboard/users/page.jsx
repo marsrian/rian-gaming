@@ -1,5 +1,6 @@
 "use client";
 import DashBoardTabs from "@/components/DashboardTabs";
+import Loading from "@/components/Loading";
 import useProfile from "@/components/useProfile";
 import { quantico } from "@/utils/fonts";
 import Link from "next/link";
@@ -19,7 +20,9 @@ const UsersPage = () => {
   }, []);
 
   if (loading) {
-    return "Loading user data...";
+    return (
+      <Loading loadingInfo={`Loading users Info...`} />
+    );
   }
 
   if (!data.admin) {

@@ -1,6 +1,7 @@
 "use client";
 import DashBoardTabs from "@/components/DashboardTabs";
 import Right from "@/components/Icons/Right";
+import Loading from "@/components/Loading";
 import useProfile from "@/components/useProfile";
 import { quantico } from "@/utils/fonts";
 import Link from "next/link";
@@ -21,8 +22,11 @@ const BlogPage = () => {
   }, []);
 
   if (loading) {
-    return "Loading Blog post...";
+    return (
+      <Loading loadingInfo={`Loading Blogs Info...`} />
+    );
   }
+
   if (!data.admin) {
     return "Not an admin";
   }

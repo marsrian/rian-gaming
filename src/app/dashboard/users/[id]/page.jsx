@@ -1,5 +1,6 @@
 "use client"
 import DashBoardTabs from "@/components/DashboardTabs";
+import Loading from "@/components/Loading";
 import UserForm from "@/components/UserForm";
 import useProfile from "@/components/useProfile";
 import { useParams } from "next/navigation";
@@ -44,7 +45,9 @@ const EditUserPage = () => {
   }
 
   if (loading) {
-    return "Loading user data...";
+    return (
+      <Loading loadingInfo={`Loading user Info...`} />
+    );
   }
 
   if (!data.admin) {
