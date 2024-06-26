@@ -135,14 +135,14 @@ const Header = () => {
                     <li>Home</li>
                   </Link>
                   <Link
-                    href="/games"
+                    href="/gameplay"
                     className={
-                      pathName === "/games" || pathName.includes("games/")
+                      pathName === "/gameplay" || pathName.includes("gameplay/")
                         ? "text-green-300"
                         : ""
                     }
                   >
-                    <li>Games</li>
+                    <li>Gameplay</li>
                   </Link>
                   <Link
                     href="/blog"
