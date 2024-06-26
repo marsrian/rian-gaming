@@ -96,7 +96,7 @@ const Header = () => {
           )}
           {status === "authenticated" && (
             <div className="flex items-center">
-              <Link href="/profile" className="whitespace-nowrap mr-2">{userName}</Link>
+              <Link href="/profile" className="whitespace-nowrap mr-2">{data.name}</Link>
               <button
                 onClick={() => signOut()}
                 className="bg-green-600 rounded-full text-white px-8 py-2"
@@ -169,7 +169,7 @@ const Header = () => {
                   {status === "authenticated" && (
                     <div className="flex flex-col gap-3">
                       {/* <p className="whitespace-nowrap">{userName}</p> */}
-                      <Link href="/profile" className="whitespace-nowrap">{userName}</Link>
+                      <Link href="/profile" className="whitespace-nowrap">{data.name}</Link>
                       <button
                         onClick={() => signOut()}
                         className="bg-green-600 rounded-full text-white px-8 py-2"

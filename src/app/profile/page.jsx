@@ -1,9 +1,9 @@
-"use client"
-import UserForm from '@/components/UserForm';
-import { useSession } from 'next-auth/react';
-import { redirect } from 'next/navigation';
-import { useEffect, useState } from 'react';
-import toast from 'react-hot-toast';
+"use client";
+import UserForm from "@/components/UserForm";
+import { useSession } from "next-auth/react";
+import { redirect } from "next/navigation";
+import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
 const ProfilePage = () => {
   const session = useSession();
@@ -59,7 +59,7 @@ const ProfilePage = () => {
         <UserForm user={user} onSave={handleProfileInfoUpdate} />
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default ProfilePage;
