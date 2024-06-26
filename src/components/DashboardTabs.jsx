@@ -21,7 +21,7 @@ const DashBoardTabs = ({ isAdmin }) => {
           </Link>
           <Link
             className={
-              pathName.includes("https://mars-rian-gaming.vercel.app/dashboard/games") ? "text-green-400" : ""
+              pathName.includes("dashboard/games") ? "text-green-400" : ""
             }
             href="/dashboard/games"
           >
