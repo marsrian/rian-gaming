@@ -137,7 +137,7 @@ const Header = () => {
                   <Link
                     href="/games"
                     className={
-                      pathName === "/games" || pathName.includes("games/")
+                      pathName === "/games" || pathName.includes("https://mars-rian-gaming.vercel.app/games")
                         ? "text-green-300"
                         : ""
                     }
