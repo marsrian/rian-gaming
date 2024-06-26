@@ -14,7 +14,7 @@ const PaginationControls = ({ hasNextPage, hasPrevPage }) => {
         className={`w-12 text-white p-1 rounded-sm ${!hasPrevPage ? "bg-emerald-300" : "bg-emerald-700"}`}
         disabled={!hasPrevPage}
         onClick={() => {
-          router.push(`/games?page=${Number(page) - 1}&per_page=${per_page}`);
+          router.push(`/gameplay?page=${Number(page) - 1}&per_page=${per_page}`);
         }}
       >
         prev
@@ -28,7 +28,7 @@ const PaginationControls = ({ hasNextPage, hasPrevPage }) => {
         className={`w-12 text-white p-1 rounded-sm ${!hasNextPage ? "bg-emerald-300" : "bg-emerald-700"}`}
         disabled={!hasNextPage}
         onClick={() => {
-          router.push(`/games?page=${Number(page) + 1}&per_page=${per_page}`);
+          router.push(`/gameplay?page=${Number(page) + 1}&per_page=${per_page}`);
         }}
       >
         next

@@ -27,7 +27,7 @@ const RecentGames = async () => {
                   {game.name}
                 </h1>
                 <Link
-                  href={`/games/${game._id}`}
+                  href={`/gameplay/${game._id}`}
                   className={`${quantico.className} text-sm font-semibold transition-opacity duration-300 mt-2 py-2  px-3 bg-emerald-600 text-white rounded-lg`}
                 >
                   Game Details

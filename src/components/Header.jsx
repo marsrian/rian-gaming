@@ -61,14 +61,14 @@ const Header = () => {
             <li>Home</li>
           </Link>
           <Link
-            href="/games"
+            href="/gameplay"
             className={
-              pathName === "https://mars-rian-gaming.vercel.app/games" || pathName.includes("https://mars-rian-gaming.vercel.app/games/")
+              pathName === "/gameplay" || pathName.includes("gameplay/")
                 ? "text-green-300"
                 : ""
             }
           >
-            <li>Games</li>
+            <li>Gameplay</li>
           </Link>
           <Link
             href="/blog"

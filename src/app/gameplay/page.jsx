@@ -3,9 +3,9 @@ import { quantico, tradeWinds } from "@/utils/fonts";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Games | MarsRianGaming",
+  title: "Gameplay | MarsRianGaming",
   openGraph: {
-    title: "Games | MarsRianGaming",
+    title: "Gameplay | MarsRianGaming",
     description: 'Dive into immersive story-based gameplay as I take you on epic adventures through your favorite games! Watch my gaming videos and live streams on Facebook and YouTube, where I share thrilling gameplay, and interactive experience',
   },
 }
@@ -58,7 +58,7 @@ const GamesPage = async ({searchParams}) => {
                   {game.name}
                 </h1>
                 <Link
-                  href={`/games/${game._id}`}
+                  href={`/gameplay/${game._id}`}
                   className={`${quantico.className} text-sm font-semibold transition-opacity duration-300 mt-2 py-2  px-3 bg-emerald-600 text-white rounded-lg`}
                 >
                   Game Details
