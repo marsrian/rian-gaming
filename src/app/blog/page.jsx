@@ -4,10 +4,12 @@ import Link from "next/link";
 import { FaRegCalendarAlt, FaRegListAlt } from "react-icons/fa";
 
 export const metadata = {
-  title: "Blogs - MarsRianGaming",
-  description:
-    "Dive into immersive story-based gameplay as I take you on epic adventures through your favorite games! Watch my gaming videos and live streams on Facebook and YouTube, where I share thrilling gameplay, and interactive experiences",
-};
+  title: "Blogs | MarsRianGaming",
+  openGraph: {
+    title: "Blogs | MarsRianGaming",
+    description: 'Dive into immersive story-based gameplay as I take you on epic adventures through your favorite games! Watch my gaming videos and live streams on Facebook and YouTube, where I share thrilling gameplay, and interactive experience',
+  },
+}
 
 const formatDate = (dateString) => {
   const date = new Date(dateString);
