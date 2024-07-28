@@ -4,12 +4,10 @@ import Link from "next/link";
 import { FaRegCalendarAlt, FaRegListAlt } from "react-icons/fa";
 
 export const metadata = {
-  title: "Blogs | MarsRianGaming",
-  openGraph: {
-    title: "Blogs | MarsRianGaming",
-    description: 'Dive into immersive story-based gameplay as I take you on epic adventures through your favorite games! Watch my gaming videos and live streams on Facebook and YouTube, where I share thrilling gameplay, and interactive experience',
-  },
-}
+  title: "Blogs",
+  description:
+    "Dive into immersive story-based gameplay as I take you on epic adventures through your favorite games! Watch my gaming videos and live streams on Facebook and YouTube, where I share thrilling gameplay, and interactive experience",
+};
 
 const formatDate = (dateString) => {
   const date = new Date(dateString);
@@ -38,7 +36,9 @@ const formatDate = (dateString) => {
 
 const BlogPage = async () => {
   const { blogs } = await getRecentBlog();
-  const sortedBlogs = blogs.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+  const sortedBlogs = blogs.sort(
+    (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+  );
 
   return (
     <div className="mt-12">

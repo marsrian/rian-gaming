@@ -3,12 +3,10 @@ import { quantico, tradeWinds } from "@/utils/fonts";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Gameplay | MarsRianGaming",
-  openGraph: {
-    title: "Gameplay | MarsRianGaming",
-    description: 'Dive into immersive story-based gameplay as I take you on epic adventures through your favorite games! Watch my gaming videos and live streams on Facebook and YouTube, where I share thrilling gameplay, and interactive experience',
-  },
-}
+  title: "Gameplay",
+  description:
+    "Dive into immersive story-based gameplay as I take you on epic adventures through your favorite games! Watch my gaming videos and live streams on Facebook and YouTube, where I share thrilling gameplay, and interactive experience",
+};
 
 async function getGameData() {
   try {
