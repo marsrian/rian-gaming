@@ -91,6 +91,8 @@ export default async function RootLayout({ children }) {
         </Script>
         {/* Google Search Console: */}
         <meta name="google-site-verification" content="j_AwOCR1SXdt-QbHMd5RPsHkm5GMcn9DnKf6aAGkxV8" />
+        {/* Google Adsense: */}
+        <meta name="google-adsense-account" content="ca-pub-6072223036226277"></meta>
       </head>
       <body
         className={`${inter.className} flex flex-col min-h-screen max-w-6xl mx-auto 

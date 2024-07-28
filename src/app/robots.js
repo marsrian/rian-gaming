@@ -8,3 +8,4 @@ export default function robots() {
       sitemap: "https://mars-rian-gaming.vercel.app/sitemap.xml",
     };
   }
+  
