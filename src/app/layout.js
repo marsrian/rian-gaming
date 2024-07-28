@@ -89,6 +89,8 @@ export default async function RootLayout({ children }) {
             gtag('config', 'G-F9XP7PXRNR');
           `}
         </Script>
+        {/* Google Search Console: */}
+        <meta name="google-site-verification" content="j_AwOCR1SXdt-QbHMd5RPsHkm5GMcn9DnKf6aAGkxV8" />
       </head>
       <body
         className={`${inter.className} flex flex-col min-h-screen max-w-6xl mx-auto 
