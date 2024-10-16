@@ -25,6 +25,15 @@ button.primary {
   animation: rotation 1s linear infinite;
 }
 
+.blog-container h1 {
+font-size: 40px;
+font-weight: 600;
+line-height: 60px;
+}
+.blog-container a {
+  color: #ff3d00;
+}
+
 @keyframes rotation {
   0% {
     transform: rotate(0deg);

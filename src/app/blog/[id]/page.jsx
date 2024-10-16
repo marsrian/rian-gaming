@@ -1,10 +1,16 @@
 import { quantico, russoOne } from "@/utils/fonts";
 import Image from "next/image";
+import Link from "next/link";
 
-export const metadata = {
-  title: "Blogs",
-  description:
-    "Dive into immersive story-based gameplay as I take you on epic adventures through your favorite games! Watch my gaming videos and live streams on Facebook and YouTube, where I share thrilling gameplay, and interactive experience",
+export const generateMetadata = async ({ params }) => {
+  const res = await fetch(`${process.env.NEXTAUTH_URL}/api/blogs/${params.id}`);
+  const blogInfo = await res.json();
+
+  return {
+    title: `${blogInfo.blog.title}`,
+    description: blogInfo?.blog?.desc[0]?.description ? blogInfo?.blog?.desc[0]?.description : blogInfo.blog.title,
+    keywords: blogInfo.blog.desc[0].description ? blogInfo.blog.desc[0].description.split(" ") : blogInfo.blog.title.split(" "),
+  };
 };
 
 async function getSingleBlogData({ id }) {
@@ -39,11 +45,16 @@ const SingleBlogPage = async ({ params }) => {
           return (
             <div key={d._id} className="mt-6">
               {d.description && (
-                <p
-                  className={`${quantico.className} mb-2 text-zinc-100 text-justify`}
-                >
-                  {d.description}
-                </p>
+                // <p
+                //   className={`${quantico.className} mb-2 text-zinc-100 text-justify`}
+                // >
+                //   {d.description}
+                // </p>
+                <div
+                  // contentEditable="true"
+                  className="blog-container text-white"
+                  dangerouslySetInnerHTML={{ __html: d.description }}
+                ></div>
               )}
               {d.imageLink && (
                 <Image
