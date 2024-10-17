@@ -4,7 +4,7 @@ import { DiscussionEmbed } from "disqus-react";
 
 const CommentsPractice = ({ blog }) => {
   const pageUrl = typeof window !== "undefined" ? window.location.href : ""
-  const disqusShortname = "techblog-bww2ltggwu";
+  const disqusShortname = process.env.NEXT_PUBLIC_DISCUSSHORTNAME;
   const disqusConfig = {
     url: pageUrl,
     identifier: blog.id,
