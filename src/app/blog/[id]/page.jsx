@@ -1,3 +1,4 @@
+import CommentsPractice from "@/components/CommentsPractice";
 import { quantico, russoOne } from "@/utils/fonts";
 import Image from "next/image";
 import Link from "next/link";
@@ -87,6 +88,7 @@ const SingleBlogPage = async ({ params }) => {
           ></iframe>
         </div>
       )}
+      <CommentsPractice blog={blog} />
     </div>
   );
 };
