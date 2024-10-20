@@ -7,7 +7,7 @@ const CommentsPractice = ({ blog }) => {
   const disqusShortname = process.env.NEXT_PUBLIC_DISCUSSHORTNAME;
   const disqusConfig = {
     url: pageUrl,
-    identifier: blog.id,
+    identifier: blog._id,
     title: blog.title,
   };
 
