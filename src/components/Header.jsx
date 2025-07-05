@@ -80,6 +80,16 @@ const Header = () => {
           >
             <li>Blog</li>
           </Link>
+          <Link
+            href="/wallpaper"
+            className={
+              pathName === "/wallpaper" || pathName.includes("blog/")
+                ? "text-green-300"
+                : ""
+            }
+          >
+            <li>Wallpaper</li>
+          </Link>
 
           {data.admin === true && (
             <Link
@@ -91,12 +101,12 @@ const Header = () => {
           )}
         </ul>
         <div className="hidden md:flex gap-6 text-white">
-          {status === "loading" && (
-            <p>Loading...</p>
-          )}
+          {status === "loading" && <p>Loading...</p>}
           {status === "authenticated" && (
             <div className="flex items-center">
-              <Link href="/profile" className="whitespace-nowrap mr-2">{data.name}</Link>
+              <Link href="/profile" className="whitespace-nowrap mr-2">
+                {data.name}
+              </Link>
               <button
                 onClick={() => signOut()}
                 className="bg-green-600 rounded-full text-white px-8 py-2"
@@ -154,6 +164,16 @@ const Header = () => {
                   >
                     <li>Blog</li>
                   </Link>
+                  <Link
+                    href="/wallpaper"
+                    className={
+                      pathName === "/wallpaper" || pathName.includes("blog/")
+                        ? "text-green-300"
+                        : ""
+                    }
+                  >
+                    <li>Wallpaper</li>
+                  </Link>
                   {data.admin === true && (
                     <Link
                       href="/dashboard/category"
@@ -169,7 +189,9 @@ const Header = () => {
                   {status === "authenticated" && (
                     <div className="flex flex-col gap-3">
                       {/* <p className="whitespace-nowrap">{userName}</p> */}
-                      <Link href="/profile" className="whitespace-nowrap">{data.name}</Link>
+                      <Link href="/profile" className="whitespace-nowrap">
+                        {data.name}
+                      </Link>
                       <button
                         onClick={() => signOut()}
                         className="bg-green-600 rounded-full text-white px-8 py-2"
