@@ -17,10 +17,10 @@ const RecentGames = async () => {
           sortedGames.slice(0, 6).map((game) => (
             <div
               key={game._id}
-              className="relative h-48 bg-cover bg-center"
+              className="relative h-48 bg-cover bg-center shadow-md shadow-slate-200 rounded-md"
               style={{ backgroundImage: `url(${game.image})` }}
             >
-              <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 hover:opacity-100 bg-black bg-opacity-0 hover:bg-opacity-75 transition-opacity duration-300">
+              <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 hover:opacity-100 bg-black bg-opacity-0 hover:bg-opacity-75 transition-opacity duration-300 rounded-md">
                 <h1
                   className={`${quantico.className} text-white text-center text-lg transition-opacity duration-300`}
                 >

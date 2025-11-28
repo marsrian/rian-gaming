@@ -27,7 +27,7 @@ async function getGameData() {
 
 const GamesPage = async ({searchParams}) => {
   const page = searchParams["page"] ?? "1";
-  const per_page = searchParams["per_page"] ?? "6";
+  const per_page = searchParams["per_page"] ?? "9";
 
   const start = (Number(page) - 1) * Number(per_page);
   const end = start + Number(per_page);
