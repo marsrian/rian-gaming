@@ -140,7 +140,7 @@ const ArrowButton = ({
   </button>
 );
 
-/* 🔢 Page Button (Neon + Gamepad) */
+/* 🔢 Page Button (Neon +  Gamepad) */
 const PageButton = ({ p,
    page,
     goToPage,
