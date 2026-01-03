@@ -47,7 +47,7 @@ const PaginationControls = ({ totalItems }) => {
           transition={{ duration: 0.25 }}
           className="flex items-center gap-2 flex-wrap justify-center"
         >
-          {/* Prev */}
+          {/* Prev   */}
           <ArrowButton
             disabled={page === 1}
             onClick={() => goToPage(page - 1)}
