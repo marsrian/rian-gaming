@@ -5,7 +5,7 @@ const WallpaperPage = () => {
   return (
     <div>
       <h3 className='text-white text-3xl font-bold mb-4 text-center'>Wallpaper Category</h3>
-      <div className='grid grid-cols-3 gap-3'>
+      <div className='grid grid-cols-3 gap-3 mx-3 md:mx-0'>
         <Image src="/hz1.png" width={500} height={300} alt='MARS RIAN GAMING POSTER' className='shadow-md shadow-slate-200 rounded-md' />
         <Image src="/hz2.png" width={500} height={300} alt='MARS RIAN GAMING POSTER' className='shadow-md shadow-slate-200 rounded-md' />
         <Image src="/hz3.png" width={500} height={300} alt='MARS RIAN GAMING POSTER' className='shadow-md shadow-slate-200 rounded-md' />
